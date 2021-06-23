@@ -1,6 +1,6 @@
 <?php
-    include 'resource/connect.php';
-    include 'resource/functions.php';
+    include 'resources/functions/db_con.php';
+    include 'resources/functions/functions.php';
     $appointment = getAppointment($_GET['appointment']);
     $appointment['date'] = explode(" ", $appointment['date']);
     $appointment['date'] = implode("T", $appointment['date']);
@@ -20,15 +20,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
-    <?php include "resource/header.php";?>
-    <section>
-    </section>
+    <?php include "resources/content/nav.php";?>
     <section class="m-3">
-        <form class="d-flex flex-column w-100 mt-auto pb-3 bg-dark text-white border border-secondary" action="" method="POST" onsubmit="return confirm('Are you sure you want to edit this appointment?')">
+        <form class="d-flex flex-column w-100 mt-auto pb-3 dark-bg text-white border border-secondary" action="" method="POST" onsubmit="return confirm('Are you sure you want to edit this appointment?')">
             <div class="row p-1">
                     <div class="col-md-3">
                         <label>Game: </label>
@@ -70,7 +68,6 @@
                 </div>
             </form>
         </section>
-    <?php include "resource/footer.php";?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-</body>
+    <?php include "resources/content/footer.php";?>
+
 </html>

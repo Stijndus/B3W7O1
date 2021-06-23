@@ -30,7 +30,7 @@
             $game = $games[array_search($row['gameId'], array_column($games, 'id'))];
             ?>
             <div class="row dark-bg text-white text-center w-100 m-0 my-1">
-                <div class="col-lg-3 border border-secondary p-2 d-flex justify-content-around"><span><?php echo $row['date'];?></span><a class="text-secondary" href="updateAppointment.php?appointment=<?php echo $row['id'];?>">edit</a><a class="text-danger" onclick="return confirm('Are you sure you want to delete this appointment?')" href="agenda.php?deleted=<?php echo $row['id'];?>">delete</a></div>
+                <div class="col-lg-3 border border-secondary p-2 d-flex justify-content-around"><span><?php echo $row['date'];?></span><a class="text-secondary" href="update.php?appointment=<?php echo $row['id'];?>">edit</a><a class="text-danger" onclick="return confirm('Are you sure you want to delete this appointment?')" href="agenda.php?deleted=<?php echo $row['id'];?>">delete</a></div>
                 <div class="col-lg-2 border border-secondary p-2"><?php echo $row['gameName'];?></div>
                 <div class="col-lg-3 border border-secondary p-2"><?php echo $row['players'];?></div>
                 <div class="col-lg-1 border border-secondary p-2"><?php echo $row['instructor'];?></div>
