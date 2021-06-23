@@ -4,7 +4,7 @@ include "resources/functions/functions.php";
 $game = getGame($_GET['id']);
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
-    appointment($game['name'],$_POST['date'], $_POST['instructor'],$_POST['players']);
+    appointment($game['name'],$_POST['date'], $_POST['instructor'],$_POST['players'], $game['id']);
 }
 
 ?>

@@ -16,8 +16,10 @@
     <title>Plannigstool</title>
 </head>
 <body>
+<div class="container">
     <?php include "resources/content/nav.php"; ?>
     <?php include "resources/content/cards.php"; ?>
     <?php include "resources/content/footer.php"; ?>
+</div>
 </body>
 </html>
