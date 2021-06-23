@@ -66,3 +66,16 @@ function deleteAppointment($id){
     $result = $result->fetchAll();
     return $result;
 }
+
+function updateAppointment($id, $name, $date, $instructor, $players, $appointmentId){
+    $pdo = dbCon();
+    $sql = 'UPDATE agenda SET gameName=:gameName, date=:date, instructor=:instructor, players=:players, gameId=:gameId WHERE id=:appointmentId';
+    $result = $pdo->prepare($sql);
+    $result->bindParam(":gameName", $name);
+    $result->bindParam(":date", $date);
+    $result->bindParam(":instructor", $instructor);
+    $result->bindParam(":players", $players);
+    $result->bindParam(":gameId", $id);
+    $result->bindParam(":appointmentId", $appointmentId);
+    $result->execute();
+}

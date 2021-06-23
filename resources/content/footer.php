@@ -1,0 +1,1 @@
+<footer class="dark-bg border border-secondary m-3 text-white text-center">&copy Stijn Dusseldorp - 2021</footer>
