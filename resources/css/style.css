@@ -10,7 +10,9 @@ body {
 a {
     text-decoration: none;
 }
-
+.image{
+    height: 315px;
+}
 .dark-bg{
     background-color: #212121;
 }
